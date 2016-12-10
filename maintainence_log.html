@@ -1,0 +1,75 @@
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>IT部维护日志录入</title>
+		<link rel="stylesheet" href="css/divradio.css" />
+		<link rel="stylesheet" href="style.css" />
+		<script src="scriptaculous/lib/prototype.js" type="text/javascript"></script>
+		<script type="text/javascript" src="scriptaculous/src/effects.js"></script>
+		<link title="style1" rel="stylesheet" href="style.css" type="text/css" />
+		<!--<script type="text/javascript" src="js/jquery-2.1.1.min.js" ></script>-->
+	</head>
+
+	<body>
+		<!--	<h1 id="bt">请在此提交维护日志</h1>-->
+		<form action="maintainence_log.php" method="post">
+			<div id="juzhong" class="form_content">
+				<fieldset>
+					<legend>设备及检修人</legend>
+					<div class="form-row">
+						<div class="field-label">
+							<label for="field1">设备编号</label> :
+						</div>
+						<div class="field-widget">
+							<input id="field1" type="text" name="device_id" class="required">
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="field-label">
+							<label for="field1">日期</label> :
+						</div>
+						<div class="field-widget">
+							<script>
+								document.write('<input name="date" class="required" value="' + (new Date).toLocaleDateString() + '">');
+							</script>
+						</div>
+
+					</div>
+					<div class="form-row">
+						<div class="field-label">
+							<label for="field1">检修人</label> :
+						</div>
+						<div class="field-widget">
+							<input id="field3" type="text" name="worker_id" class="required">
+						</div>
+					</div>
+				</fieldset>
+			
+				<!--设备编号<input capture="camcorder" name="device_id">-->
+				<fieldset>
+					<legend class="optional">机器状况</legend>
+					开机是否正常<br/>
+					<input type="radio" name="boot" value="OK" checked>正常
+					<input type="radio" name="boot" value="ERROR">不正常<br /><br/> 系统是否正常运行
+					<br />
+					<input type="radio" name="system" value="OK" checked>正常
+					<input type="radio" name="system" value="ERROR">不正常<br /><br/> 硬盘状态
+					<br />
+					<input type="radio" name="disk" value="Warning" checked>警告
+					<input type="radio" name="disk" value="Important">重视<br /><br/>
+					<div class="form-row">
+						<div class="field-label">
+							<label>备注</label>:
+						</div>
+						<div class="field-widget">
+							<textarea name="remarks" class="required" placeholder="请输入备注...">
+</textarea>
+						</div>
+					</div>
+				</fieldset>
+				<input type="submit" value="提交" name="sub" align="absmiddle" >
+			</div>
+		</form>
+		</div>
+	</body>

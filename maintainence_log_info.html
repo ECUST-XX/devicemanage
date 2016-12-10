@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>维护日志信息</title>
+		<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+		 <!--[if lt IE 9]>
+	      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+	</head>
+	<body>
+		
+		<div class="text-center">
+			<h1>维护日志信息</h1>
+			<p> <a href="maintainence_log.html" class="btn btn-lg btn-success" role="button">添加维护日志</a>
+			</p>
+		</div>
+		<div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>设备编号</th>
+                  <th>日期</th>
+                  <th>开机</th>
+                  <th>系统正常运行</th>
+                  <th>硬盘状态</th>
+                  <th>检修人</th>
+                  <th>备注</th>
+                </tr>
+              </thead>
+              <tbody id="info">
+              </tbody>
+            </table>
+          </div>
+        <script src="js/jquery-2.1.1.min.js"></script>
+		<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+		
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#info").load("maintainence_log_info.php");
+			});
+		</script>
+	</body>
+</html>

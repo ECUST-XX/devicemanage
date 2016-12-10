@@ -1,0 +1,27 @@
+#xuxian1{
+width:100%;
+height:0px;
+border-bottom:#444444  5px ridge;}
+
+#xuxian2{
+width:95%;
+height:0px;
+border-bottom:#7B68EE  5px inset;}
+
+h1{
+	margin:0px; 
+	padding:0px;
+	height:60px;
+	background: linear-gradient(to bottom right,thistle,silver);
+}
+
+body{
+	background-color:#gainsboro;
+}
+
+.table th, .table td { 
+text-align: center; 
+height:38px;
+}
+
+

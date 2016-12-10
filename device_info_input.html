@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+<title>	IT部设备信息录入</title>
+
+<script src="scriptaculous/lib/prototype.js" type="text/javascript"></script>
+<script src="scriptaculous/src/effects.js" type="text/javascript"></script>
+<script type="text/javascript"></script>
+
+<link title="style1" rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body>
+	<div class="form_content">
+    <form id="test" action="device_info_input.php" method="post">
+    <!-- 第一部分     机器编号-->
+    <fieldset>
+        <legend>机器编号</legend>
+        
+        <!--编号-->
+        <div class="form-row">
+            <div class="field-label"><label for="field1">编号</label>:</div>
+            <div class="field-widget"><input name="device_id" id="field1" class="required" title="Enter your name" /></div>
+        </div>
+        
+        
+        <!--校级编号-->
+        <div class="form-row">
+            <div class="field-label"><label for="field2">校级编号</label>:</div>
+            <div class="field-widget"><input name="school_id" id="field2" class="required" title="Enter your name" /></div>
+        </div>
+    </fieldset>
+    <!-- 第一部分   机器编号 -->
+  
+  
+    <!-- 第二部分   机器信息-->
+    <fieldset>
+        <legend>机器信息</legend>
+        
+        <!--机器位置-->
+        <div class="form-row">
+            <div class="field-label"><label for="field4">机器位置</label>:</div>
+            <div class="field-widget"><input name="place" id="field4" class="required" title="Enter your name" /></div>
+        </div>
+        
+        
+        <!--机器类型-->
+    	<div class="form-row">
+            <div class="field-label"><label for="field6">机器类型</label>:</div>
+            <div class="field-widget">
+                <select id="name" name="name" class="validate-selection" title="Choose your department">
+                    <option value="台式机">台式机</option>
+                    <option value="服务器">服务器</option>
+                </select>
+            </div>
+        </div>
+        
+        
+        <!--CPU-->
+        <div class="form-row">
+            <div class="field-label"><label for="field5">CPU</label>:</div>
+            <div class="field-widget"><input name="cpu" id="field5" class="required validate-email" title="Enter your name" /></div>
+        </div> 
+       
+        
+        <!--内存-->
+        <div class="form-row">
+            <div class="field-label"><label for="field5">内存(GB)</label>:</div>
+            <div class="field-widget"><input name="memory" id="field5" class="required validate-email" title="Enter your name" /></div>
+        </div> 
+        
+        
+        <!--硬盘-->
+        <div class="form-row">
+            <div class="field-label"><label for="field5">硬盘</label>:</div>
+            <div class="field-widget"><input name="disk" id="field5" class="required validate-email" title="Enter your name" /></div>
+        </div> 
+     
+     
+        
+        
+        <!--现状-->
+        <div class="form-row">
+            <div class="field-label"><label for="field6">现状</label>:</div>
+            <div class="field-widget">
+                <select id="status" name="status" class="validate-selection" title="Choose your department">
+                    <option value="正常使用">正常使用</option>
+                    <option value="故障">故障</option>
+                </select>
+            </div>
+        </div>
+     
+     
+        <!--备注-->
+        <div class="form-row">
+            <div class="field-label"><label for="field3">备注</label>:</div>
+            <div class="field-widget"><textarea name="remarks" class="required"></textarea></div>
+        </div>
+      
+      
+    </fieldset>  
+    <!-- 第二部分   机器信息-->
+  
+    <input type="submit" class="submit" value="Submit" />
+    </form>
+    </div>
+</body>
+</html>
