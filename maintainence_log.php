@@ -24,5 +24,8 @@ if ($lastid>1)
 	echo "硬盘状态：$profile[disk_warning]<br/>";
 	echo "备注为：$profile[remarks]<br/>";
 }
-else echo "<h1>输入有误。请检查后重新输入。</h1>"
+else echo "<h1>输入有误。请检查后重新输入。</h1>";
+
+echo "<h1>5秒后自动跳转...或<a href = 'index.html'>直接跳转</a></h1>";
+echo "<meta http-equiv = 'refresh' content = '5;url=index.html' />";
 ?>
